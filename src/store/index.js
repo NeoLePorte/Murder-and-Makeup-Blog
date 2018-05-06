@@ -17,6 +17,7 @@ export const state = () => ({
           })
           .then(res => res.data.stories.map(bp => {
               return {
+                blok: bp.content,
                 id: bp.slug,
                 title: bp.content.title,
                 summary: bp.content.summary,
