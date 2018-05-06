@@ -1,5 +1,4 @@
 export const state = () => ({
-    post : {},
     posts:[]
   })
 
@@ -7,10 +6,6 @@ export const state = () => ({
     
       GET_POSTS(state, posts) {
         state.posts = posts
-      },
-
-       GET_SINGLE_POST(state, post) {
-         state.post = post
       }
   }
 
@@ -31,9 +26,5 @@ export const state = () => ({
             })
           )
           commit('GET_POSTS', posts)
-        },
-       async asyncGetSinglePost (id, {commit, state}) {
-          const post = await state.posts.filter((post) => post['id'] === id)[0]
-          commit('GET_SINGLE_POST', post)
         }
   }
