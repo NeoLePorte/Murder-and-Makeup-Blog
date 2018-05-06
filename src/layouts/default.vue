@@ -1,14 +1,20 @@
 <template>
   <v-app dark>
+   <v-parallax fixed src="https://a.storyblok.com/f/44437/1280x720/167c96e5ce/noir-dame.jpg" height="450">
+      <v-layout column lg align-start justify-center>
+        <!-- <a><h1 class="white--text">Murder & Makeup</h1></a>
+        <h4 class="white--text">Murder, Mystery, and Makeup</h4> -->
+      </v-layout>
+    </v-parallax>
     <v-toolbar fixed app :clipped-left="clipped">
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
+      <!-- <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>menu</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-toolbar>
     <v-content>
       <v-container>

@@ -1,5 +1,5 @@
 const pkg = require('./package')
-
+const accessToken = require('./config.js')
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FFFFFF' },
+  loading: { color: '#FF69B4' },
 
   /*
   ** Global CSS
@@ -38,7 +38,6 @@ module.exports = {
   */
   plugins: [
     '@/plugins/vuetify',
-    '@/plugins/index'
   ],
 
   /*
@@ -46,7 +45,9 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    ['storyblok-nuxt', 
+    {accessToken: accessToken, cacheProvider: "memory" },
+  ]
   ],
   /*
   ** Axios module configuration
@@ -58,8 +59,23 @@ module.exports = {
   /*
   ** Build configuration
   */
+//  buildDir: '../functions/.nuxt',
   build: {
-    vendor: ['~/plugins/index.js'],
+    publicPath:"/.nuxt/dist",
+    vendor: ['~/plugins/index.js', '~/plugins/vuetify'],
+    extractCSS: true,
+    babel: {
+      presets: [
+        'env',
+        'stage-0'
+      ],
+      plugins: [
+        ["transform-runtime", {
+          "polyfill": true,
+          "regenerator": true
+        }]
+      ]
+    },
     /*
     ** You can extend webpack config here
     */
