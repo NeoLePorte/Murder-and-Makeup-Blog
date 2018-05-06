@@ -10,7 +10,7 @@ export const state = () => ({
   }
 
   export const actions = {
-        async asyncGetPosts ({ commit }) {
+        async nuxtServerInit ({ commit }) {
           let posts = await this.$storyapi.get('cdn/stories', {
             version: "draft",
             starts_with: 'blog/'

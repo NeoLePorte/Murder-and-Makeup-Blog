@@ -68,9 +68,10 @@
 
 <script>
 export default {
-   async asyncData({store}) { 
-    await store.dispatch('asyncGetPosts')
-    return {posts: store.state.posts}
+    asyncData({store}) { 
+    return {
+      posts: store.state.posts
+      }
  }
 }
 </script>
