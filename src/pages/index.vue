@@ -1,32 +1,11 @@
 <template>
   <v-layout row wrap align-center>
-     <v-flex xs12 md4>
+     <v-flex xs12 md12>
       <div class="text-xs-center">
-        <v-avatar size="120px">
-          <img
-            class="img-circle elevation-7 mb-1"
-            src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/30742928_1621424011287362_6264051029159968768_n.jpg?_nc_cat=0&oh=d888497aa72ebbe7a8406812a0c521fb&oe=5B51DE95"
-          >
-        </v-avatar>
-        <div class="headline">Lexie <span style="font-weight:bold">Quinn</span></div>
-        <div class="subheading text-xs-center grey--text pt-1 pb-3">Lorem ipsum dolor sit amet</div>
-        <no-ssr>
-        <v-layout justify-space-between>
-          <a 
-          href="javascript:;" 
-          class="body-2"><nuxt-link 
-          to="/">
-          Home
-          </nuxt-link>
-          </a>
-          <a href="javascript:;" class="body-2">About</a>
-          <a href="javascript:;" class="body-2">Other</a>
-        </v-layout>
-        </no-ssr>
       </div>
     </v-flex>
 
-    <v-flex xs12 md5 offset-md2>
+    <v-flex xs12 md6 offset-md3>
       <div v-for="post in posts" :key="post.title">
         <v-card class="my-3" hover>
           <v-card-media
@@ -72,6 +51,12 @@ export default {
     return {
       posts: store.state.posts
       }
- }
+ },
+ transition: {
+    name: "page",
+    enterActiveClass: "animated fadeIn",
+    leaveActiveClass: "animated fadeOut",
+    duration: 500
+  },
 }
 </script>

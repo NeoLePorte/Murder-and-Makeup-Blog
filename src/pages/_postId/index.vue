@@ -5,12 +5,11 @@
     <v-layout class="post-content">
       <v-flex>
         <h1>{{ post.title }}</h1>
+        <v-spacer></v-spacer>
         <p>{{ post.content }}</p>
       </v-flex>
     </v-layout>
   </div>
-    
-
 </template>
 
 <script>
@@ -20,6 +19,12 @@ export default {
      post: await store.state.posts
      .filter((post) => post['id'] === params.postId)[0]
      }
+  },
+  transition: {
+    name: "page",
+    enterActiveClass: "animated fadeIn",
+    leaveActiveClass: "animated fadeOut",
+    duration: 500
   },
   mounted() {
     this.$storyblok.init()

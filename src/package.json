@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
+    "animate.css": "^3.6.1",
     "express": "^4.15.3",
-    "firebaseui": "^2.7.0",
     "nuxt": "^1.0.0",
     "storyblok-nuxt": "0.0.3",
     "vuetify": "^0.17.3"
