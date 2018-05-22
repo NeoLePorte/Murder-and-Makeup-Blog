@@ -19,6 +19,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
       { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" }
+      
     ]
   },
 
@@ -39,7 +40,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify',
+    '@/plugins/vuetify'
   ],
 
   /*
@@ -47,9 +48,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    ['storyblok-nuxt', 
-    {accessToken: accessToken, cacheProvider: "memory" },
-  ]
+    ['storyblok-nuxt', {accessToken: accessToken, cacheProvider: "memory" }],
+    '@nuxtjs/font-awesome'
   ],
   /*
   ** Axios module configuration

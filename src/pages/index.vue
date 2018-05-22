@@ -25,13 +25,13 @@
             {{ post.summary }}
           </v-card-text>
           <v-card-actions>
-            <v-btn icon class="red--text">
+            <v-btn :href="`https://reddit.com/submit?url=http://127.0.0.1:3000/${post.id}&title=${post.title}`" target="_blank" rel=noopener icon class="red--text">
               <v-icon medium>fa-reddit</v-icon>
             </v-btn>
-            <v-btn icon class="light-blue--text">
+            <v-btn :href="`https://twitter.com/home?status=http%3A//127.0.0.1%3A3000/${post.id}`" target="_blank" rel=noopener icon class="light-blue--text">
               <v-icon medium>fa-twitter</v-icon>
             </v-btn>
-            <v-btn icon class="blue--text text--darken-4">
+            <v-btn :href="`https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A3000/${post.id}` " target="_blank" rel=noopener icon class="blue--text text--darken-4">
               <v-icon medium>fa-facebook</v-icon>
             </v-btn>
             <v-spacer></v-spacer>
