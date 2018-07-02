@@ -36,7 +36,7 @@ async function start() {
   //   res.json({message: 'Hello, Nurse!'});
   // }));
 
-  // Listen the server
+  // Listen the serverr
   app.listen(port, host)
   console.log('Server listening on http://' + host + ':' + port) // eslint-disable-line no-console
 }
