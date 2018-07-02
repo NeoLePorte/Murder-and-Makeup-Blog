@@ -17,14 +17,15 @@ export default {
    async asyncData({store, params}) {
    return {
      post: await store.state.posts
-     .filter((post) => post['id'] === params.postId)[0]
+     .filter(post => post['id'] === params.postId)[0]
      }
+          
   },
   transition: {
     name: "page",
     enterActiveClass: "animated fadeIn",
     leaveActiveClass: "animated fadeOut",
-    duration: 500
+    duration: 400
   },
   mounted() {
     this.$storyblok.init()

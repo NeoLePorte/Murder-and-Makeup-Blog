@@ -9,3 +9,7 @@ a {
 .application a:hover {
     color: hotpink;
 }
+
+.about-content {
+    padding-top: 8em;
+}

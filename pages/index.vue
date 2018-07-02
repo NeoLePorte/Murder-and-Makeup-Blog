@@ -56,7 +56,7 @@ export default {
     name: "page",
     enterActiveClass: "animated fadeIn",
     leaveActiveClass: "animated fadeOut",
-    duration: 500
+    duration: 400
   },
 }
 </script>

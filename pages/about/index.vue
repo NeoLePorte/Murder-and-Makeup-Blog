@@ -1,8 +1,8 @@
 <template>
-<v-layout column wrap align-center>
+<v-layout column wrap align-center fill-height justify-center>
     <v-flex xs12 md8>
-        <div class="text-xs-center">
-        <v-avatar size="120px">
+        <div class="text-xs-center about-content">
+        <v-avatar color="orange"  size="150px">
             <img
             class="img-circle elevation-7 mb-1"
             src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/30742928_1621424011287362_6264051029159968768_n.jpg?_nc_cat=0&oh=d888497aa72ebbe7a8406812a0c521fb&oe=5B51DE95"
