@@ -14,9 +14,9 @@
 
 <script>
 export default {
-   async asyncData({store, params}) {
+    asyncData({store, params}) {
    return {
-     post: await store.state.posts
+     post: store.state.posts
      .filter(post => post['id'] === params.postId)[0]
      }
           
